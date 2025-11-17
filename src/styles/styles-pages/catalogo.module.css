@@ -36,7 +36,9 @@
 
 .BoxProduto:hover{
     transform: translateY(-8px);
-    box-shadow: 0px 12px 28px rgba(0,0,0,0.7);
+    box-shadow: 0px 16px 20px -3px rgba(48,60,192,0.61);
+-webkit-box-shadow: 0px 16px 20px -3px rgba(48,60,192,0.61);
+-moz-box-shadow: 0px 16px 20px -3px rgba(48,60,192,0.61);;
 }
 
 .ImgArea {

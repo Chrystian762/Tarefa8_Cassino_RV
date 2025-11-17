@@ -1,34 +1,49 @@
-import { useParams, Link } from 'react-router-dom'
-import styles from '../../styles/styles-pages/produto.module.css'
-import Produto1 from '../../assets/imgCatalogo/produtoImg1.png'
+import { useParams, Link } from "react-router-dom";
+import styles from "../../styles/styles-pages/produto.module.css";
+import Produto1 from "../../assets/imgCatalogo/produtoImg1.png";
 
-function Produto(){
+function Produto() {
+    const { id } = useParams();
 
-    const { id } = useParams()
+    const produtos = [
+        { id: 1, nome: "Filtro de Linha Gamer", preco: "99,90", img: Produto1 },
+        { id: 2, nome: "Headset RGB", preco: "149,90", img: Produto1 },
+        { id: 3, nome: "Mouse Gamer 7200dpi", preco: "79,90", img: Produto1 },
+        { id: 4, nome: "Teclado Mecânico", preco: "199,90", img: Produto1 },
+        { id: 5, nome: "Webcam HD", preco: "89,90", img: Produto1 },
+        { id: 6, nome: "Cadeira de Escritório", preco: "299,90", img: Produto1 },
+        { id: 7, nome: "Suporte para Notebook", preco: "59,90", img: Produto1 },
+        { id: 8, nome: "Hub USB 3.0", preco: "39,90", img: Produto1 },
+        { id: 9, nome: "Mousepad XL", preco: "49,90", img: Produto1 },
+        { id: 10, nome: "Caixa Bluetooth", preco: "129,90", img: Produto1 },
+    ];
 
-    return(
-        <div className={styles.ContainerProduto}>
-            <div className={styles.BoxProduto}>
+    const produto = produtos.find((p) => p.id === Number(id));
 
-                <img src={Produto1} alt="Produto" className={styles.ImgProduto}/>
+    if (!produto) {
+        return <h1 className={styles.Erro}>Produto não encontrado.</h1>;
+    }
 
-                <div className={styles.InfoProduto}>
-                    <h1 className={styles.TituloProduto}>Produto #{id}</h1>
-                    <p className={styles.Descricao}>
-                        Este é um produto detalhado da ByteStore.  
-                        Ele possui qualidade premium, ótimo custo-benefício e é perfeito para o seu setup!
-                    </p>
+    return (
+        <div className={styles.Container}>
 
-                    <h2 className={styles.Preco}>R$ 99,99</h2>
+            <img src={produto.img} alt={produto.nome} className={styles.ImgProduto}/>
 
-                    <Link to={`/comprar/${id}`}>
-                        <button className={styles.BtnComprar}>Ir para Compra</button>
-                    </Link>
-                </div>
+            <div className={styles.InfoProduto}>
+                <h1 className={styles.Titulo}>{produto.nome}</h1>
+                <p className={styles.Preco}>R$ {produto.preco}</p>
 
+                <p className={styles.Descricao}>
+                    Produto de alta qualidade ideal para o seu dia a dia ou ambiente de trabalho.
+                </p>
+
+                <Link to={`/comprar/${produto.id}`}>
+                    <button className={styles.BotaoComprar}>Comprar Agora</button>
+                </Link>
             </div>
+
         </div>
-    )
+    );
 }
 
-export default Produto
+export default Produto;

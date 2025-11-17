@@ -20,14 +20,32 @@ function Footer(){
                     © 2025 BytStore Inc. All rights reservaduss.
                 </p>
             </div>
-            <div className={styles.BoxFooter}>
+            <div className={styles.ContentFooter}>
                 <p className={styles.DireitosFooter}>Criadores</p>
-            </div>
-            <div className={styles.BoxFooter}>
-                <img src={ImgRodrigo} alt="Rodrigo" className={styles.ImgPessoa} />
-                <img src={ImgLinkedin} alt="Linkedin" className={styles.ImgIcone} />
-                <img src={ImgGithub} alt="GitHub" className={styles.ImgIcone} />
-                <img src={ImgChrystian} alt="Chrystian" className={styles.ImgPessoa}/>
+                <div className={styles.BoxFooterCriadores}>
+                    <div className={styles.CriadoresFooter}>
+                    <img src={ImgRodrigo} alt="Rodrigo" className={styles.ImgPessoa} />
+                        <div className={styles.RedesSociais}>
+                            <a href="https://www.linkedin.com/in/rodrigo-santos-a950b2343" target='_blank'>
+                                <img src={ImgLinkedin} alt="Linkedin" className={styles.ImgIcone} />
+                            </a>
+                            <a href="https://github.com/YzMenoH" target='_blank'>
+                                <img src={ImgGithub} alt="GitHub" className={styles.ImgIcone} />
+                            </a>
+                        </div>
+                    </div>
+                    <div className={styles.CriadoresFooter}>
+                    <img src={ImgChrystian} alt="Chrystian" className={styles.ImgPessoa}/>
+                        <div className={styles.RedesSociais}>
+                            <a href="https://www.linkedin.com/in/chrystian-gabriel-93799a29b" target='_blank'>
+                                <img src={ImgLinkedin} alt="Linkedin" className={styles.ImgIcone} />
+                            </a>
+                            <a href="https://github.com/Chrystian762" target='_blank'>
+                                <img src={ImgGithub} alt="GitHub" className={styles.ImgIcone} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     )

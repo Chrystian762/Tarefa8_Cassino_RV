@@ -9,10 +9,29 @@
     background: linear-gradient(25deg, rgba(73, 86, 230, 1) 0%, rgba(18, 26, 89, 1) 100%);
     padding: 10px;
 }
-
+.ContentFooter{
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding:  0px 20px 20px 20px;
+    margin-bottom: 10px;
+}
 .BoxFooter{
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.BoxFooterCriadores{
+    display: flex;
+    flex-direction:row;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -40,13 +59,38 @@
     border-radius: 40px;
 }
 .ImgIcone{
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    transition: all 0.2s ease-in-out;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
 }
 .ImgIcone:hover{
-    margin-bottom: 10px;
-    background: #00000040;
-    border-radius: 15px;
+    transform: scale(1.2);
+    background: #4956E640;
+    border-radius: 10px;
+}
+.CriadoresFooter{
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    padding: 10px;
+    border-radius: 20px;
+}
+.ImgIcone .CriadoresFooter:hover{
+    background: #4956E640;
+}
+.RedesSociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: #4956E6 solid 2px;
+    margin-top: 5px;
 }
